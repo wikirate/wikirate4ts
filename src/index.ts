@@ -2,9 +2,7 @@ import API from "./wikirate-api.js";
 
 async function main() {
     const client = new API(
-        process.env.WIKIRATE_API_TOKEN || "",
-        "https://staging.wikirate.org",
-        { username: process.env.WR_STAGING_USER || "", password: process.env.WR_STAGING_PASS || "" }
+        process.env.WIKIRATE_API_TOKEN || ""
     );
 
     const answers = await client.get_answers({
